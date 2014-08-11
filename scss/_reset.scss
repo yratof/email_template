@@ -1,0 +1,50 @@
+/*////// RESET STYLES //////*/
+body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:100% !important;}
+table{border-collapse:collapse;}
+img, a img{border:0; outline:none; text-decoration:none;}
+h1, h2, h3, h4, h5, h6{margin:0; padding:0;}
+p{margin: 1em 0;}
+
+/*////// CLIENT-SPECIFIC STYLES //////*/
+.ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail/Outlook.com to display emails at full width. */
+.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div{line-height:100%;} /* Force Hotmail/Outlook.com to display line heights normally. */
+table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} /* Remove spacing between tables in Outlook 2007 and up. */
+#outlook a{padding:0;} /* Force Outlook 2007 and up to provide a "view in browser" message. */
+img{-ms-interpolation-mode: bicubic;} /* Force IE to smoothly render resized images. */
+body, table, td, p, a, li, blockquote{-ms-text-size-adjust:100%; -webkit-text-size-adjust:100%;} /* Prevent Windows- and Webkit-based mobile platforms from changing declared text sizes. */
+
+
+/* CLIENT-SPECIFIC STYLES */
+#outlook a{padding:0;} /* Force Outlook to provide a "view in browser" message */
+.ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail to display emails at full width */
+/* Force Hotmail to display normal line spacing */
+.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
+body, table, td, a{-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;} /* Prevent WebKit and Windows mobile changing default text sizes */
+table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} /* Remove spacing between tables in Outlook 2007 and up */
+img{-ms-interpolation-mode:bicubic;} /* Allow smoother rendering of resized image in Internet Explorer */
+
+/* RESET STYLES */
+body{margin:0; padding:0;}
+img{border:0; height:auto; line-height:100%; outline:none; text-decoration:none;}
+table{border-collapse:collapse !important;}
+body{margin:0; padding:0; min-width:100%; width:100% !important;}
+
+@media screen {
+
+	@font-face {
+	    font-family: 'clarendon';
+	    src: url('http://www.fullphatdesign.co.uk/wp-content/themes/fullphatdesign/js/clarendonltstd-bold-webfont.woff') format('woff'),
+	         url('http://www.fullphatdesign.co.uk/wp-content/themes/fullphatdesign/js/clarendonltstd-bold-webfont.ttf') format('truetype');
+	    font-weight: 100;
+	    font-style: normal;
+	}
+
+	@font-face {
+	    font-family: 'avenir';
+	    src: url('wp-content/themes/fullphatdesign/js/avenirlt-roman-webfont.woff') format('woff'),
+	         url('wp-content/themes/fullphatdesign/js/avenirlt-roman-webfont.ttf') format('truetype');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+
+}

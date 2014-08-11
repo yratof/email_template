@@ -1,0 +1,270 @@
+// Colours
+
+$white:		#FFFFFF;
+$black:		#000000;
+
+$teal:		#26A2AC;
+$red:		#CC004A;
+$orange:	#ff9214;
+$green:		#A1B109;
+$blue:		#0592b0;
+$purple:	#7a0c4d;
+
+$body:		#626262;
+$background: $white;
+
+// Fonts
+
+$title:		'clarendon', Helvetica, Arial, sans-serif;
+$body:		'avenir', Helvetica, Arial, sans-serif;
+
+// This is a map. DEAL WIV IT.
+
+$themes: ( 
+	'teal' $teal,
+	'red' $red,
+	'orange' $orange,
+	'green' $green,
+	'blue' $blue,
+	'purple' $purple
+) !global;
+
+@each $brand, $colour in $themes {
+
+	.section-#{$brand} {
+		background: $colour;
+		padding: 50px 15px 50px 15px;
+		
+		.p{
+			@if (lightness($colour) > 30%){
+				color: shade($colour, 60%);
+			} @else {
+				color: tint($colour, 80%);
+			}
+		}
+		
+		.button-container{
+			background: shade($colour, 40%);
+		}
+		.button{
+			border: 1px solid shade($colour, 45%); 
+		}
+	}
+}
+
+// Title and paragraph fonts throughout
+
+.h1{
+	font-size: 36px; 
+	font-family: $title;
+	color: $white;
+	font-weight: 300;
+	text-align: center;
+}
+
+.h2{
+	font-size: 25px; 
+	font-family: $title;
+	color: $white;
+	font-weight: 300;
+	text-align: center;	
+}
+
+.p{
+	padding: 20px 0 0 0; 
+	font-size: 18px; 
+	line-height: 26px; 
+	font-family: $body;
+}
+
+
+//buttons are mental
+
+.button-container{
+	-webkit-border-radius: 3px; 
+	-moz-border-radius: 3px; 
+	border-radius: 3px;
+}
+
+.button{
+	font-size: 16px;
+	font-family: $body;
+	color: $white;
+	text-decoration: none;
+	color: $white;
+	text-decoration: none;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	padding: 12px 18px;
+	border: 1px solid #0b534a; 
+	display: block;
+}
+
+.img-max{
+   max-width: 100%;
+   width: 100%;
+   height: auto;
+}
+
+
+.logo + .h1 {
+    color: $teal;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+// The tables themselves
+
+@media screen and (min-width: 651px) {
+    table[class="responsive-table"] { 
+	    width: 500px !important; 
+	    height: auto !important;
+    }    
+}
+
+@media screen and (max-width: 525px) {
+
+	.h1{
+		font-size: 22px;
+		line-height: 32px;
+	}
+	
+	.p{
+		font-size: 16px; 
+		line-height: 24px; 
+	}
+	
+	.logo{
+		width: 70px;
+		height: 93px;
+		
+		& + h1 {
+			font-size: 20px;
+		}
+	}
+
+
+    table[class="wrapper"]{
+      width:100% !important;}
+
+    td[class="logo"]{
+      text-align: left;
+      padding: 20px 0 20px 0 !important;}
+
+    td[class="mobile-hide"]{
+      display:none !important;}
+
+    img[class="mobile-hide"]{
+      display: none !important;}
+
+    td[class="display-img"] {max-width: 100% !important; height: auto !important; display: block !important;}
+
+    td[class="logo"] img{
+      margin:0 auto!important;}
+
+	.img-max{
+	   max-width: 100%;
+	   width: 100%;
+	   height: auto;
+	}
+	
+    img[class="img-max"]{
+      max-width: 100%;
+      width: 100%;
+      height: auto;}
+
+    table[class="responsive-table"]{
+      width:100% !important;}
+
+    table[class="responsive-table2"]{
+      width:100%!important;
+      border:0 !important;
+     }
+        
+        table[class="responsive-button"]{
+      width:100% !important;}
+
+      table[class="responsive-webinar"]{
+      width:50%!important;}
+
+    td[class="padding"]{
+      padding: 10px 5% 15px 5% !important;}
+
+    td[class="padding2"]{
+      padding: 10px 5% 10px 5% !important;
+      text-align: left;
+    }
+        
+    td[class="padding2-top5"]{
+        padding: 10px 5% 10px 5% !important;
+        font-size: 25px !important;
+        text-align: left !important;
+    }
+        
+    td[class="padding2-top5-text"]{
+        padding: 10px 5% 10px 5% !important;
+        font-size: 16px !important;
+        line-height: 25px !important;
+        text-align: left !important;}
+
+    td[class="padding6"]{
+      padding: 0px 5% 10px 5% !important;
+      text-align: left;}
+
+    td[class="section-padding"]{
+      padding: 50px 15px 50px 15px !important;}
+
+    td[class="section-padding2"]{
+      padding: 50px 15px 0 15px !important;}
+        
+        td[class="section-padding10"]{
+            padding: 25px 15px 25px 15px !important;}
+
+    td[class="section-padding5"]{
+        padding: 0 8% 0 8% !important;}
+
+    td[class="mobile-wrapper"]{
+        padding: 10px 5% 15px 5% !important;}
+
+    td[class="team-pad"]{
+        padding: 10px 0 0 0 !important;}
+
+    td[class="padding10"]{
+        padding: 10px 0 !important;}
+        
+    table[class="responsive-button"] {
+        width: 100% !important;}
+        
+    table[class="responsive-table2"]{
+      width:50%!important;
+      border:0 !important;
+     }
+
+    a[class="social-twitter"]{width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        line-height: 40px !important;
+        text-align: center !important;
+        background: #55acee url('twitter-bg2.gif') no-repeat !important;}
+        
+    a[class="social-facebook"]{width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        line-height: 40px !important;
+        text-align: center !important;
+        background: #3b5998 url('fb-bg2.gif') no-repeat !important;}
+        
+    a[class="social-dribbble"]{
+        width: 100% !important;
+        max-width:100% !important;
+        padding: 0 !important;
+        line-height: 40px !important;
+        text-align: center !important;
+        background: #ea4c89 url('dribbble-bg2.gif') no-repeat !important;
+       }
+        
+    td[class="no-pad"]{padding:0 !important;}
+    td[class="pad10"]{padding: 10px 0 !important;}
+
+    }
